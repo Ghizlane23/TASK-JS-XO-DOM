@@ -45,13 +45,14 @@ function clickButton(index) {
   }
   if (currentPlayer === "x") {
     p1.push(index);
-    checkWinner(p1);
   } else {
     p2.push(index);
-    checkWinner(p2);
   }
 
   fillButton(index, currentPlayer);
+  checkWinner(p2);
+  checkWinner(p1);
+
   console.log(`Button number ${index} is clicked`);
   currentPlayer = currentPlayer == "x" ? "o" : "x";
 
